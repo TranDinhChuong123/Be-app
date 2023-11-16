@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 
-export default function GiaoDoAnYT({ navigation }) {
+export default function HoatDongTC({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
@@ -41,6 +41,15 @@ export default function GiaoDoAnYT({ navigation }) {
           Khám phá ngay
         </Text>
       </TouchableOpacity>
+
+      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <View style={{ width: 50, height: 50, backgroundColor: "red" }}></View>
+        <View
+          style={{ width: 50, height: 50, backgroundColor: "green" }}
+        ></View>
+        <View style={{ width: 50, height: 50, backgroundColor: "blue" }}></View>
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
