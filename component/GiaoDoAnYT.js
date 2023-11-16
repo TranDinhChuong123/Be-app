@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+<<<<<<< HEAD
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 
 export default function GiaoDoAnYT({ navigation }) {
@@ -41,6 +42,14 @@ export default function GiaoDoAnYT({ navigation }) {
           Khám phá ngay
         </Text>
       </TouchableOpacity>
+=======
+import { StyleSheet, Text, View } from "react-native";
+
+export default function GiaoDoAnYT() {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+>>>>>>> 492e18e470b7e86966d7048290c1870c697f36f7
       <StatusBar style="auto" />
     </View>
   );
@@ -49,7 +58,11 @@ export default function GiaoDoAnYT({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+<<<<<<< HEAD
     backgroundColor: "#f1f5f8",
+=======
+    backgroundColor: "#fff",
+>>>>>>> 492e18e470b7e86966d7048290c1870c697f36f7
     alignItems: "center",
     justifyContent: "center",
   },

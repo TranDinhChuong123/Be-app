@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+<<<<<<< HEAD
 import { FlatList, Image, ScrollView, TouchableOpacity } from "react-native";
 import { StyleSheet, Text, View } from "react-native";
 const data = [
@@ -30,10 +31,14 @@ const data1 = [
     text: "Món ăn truyền thống",
   },
 ];
+=======
+import { StyleSheet, Text, View } from "react-native";
+>>>>>>> 492e18e470b7e86966d7048290c1870c697f36f7
 
 export default function GiaoDoAnTK() {
   return (
     <View style={styles.container}>
+<<<<<<< HEAD
       <ScrollView
         style={{ position: "absolute", width: "100%", height: "100%" }}
       >
@@ -277,6 +282,9 @@ export default function GiaoDoAnTK() {
         ></FlatList>
       </ScrollView>
 
+=======
+      <Text>Open up App.js to start working on your app!</Text>
+>>>>>>> 492e18e470b7e86966d7048290c1870c697f36f7
       <StatusBar style="auto" />
     </View>
   );
@@ -288,6 +296,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+<<<<<<< HEAD
     // width: "100%",
+=======
+>>>>>>> 492e18e470b7e86966d7048290c1870c697f36f7
   },
 });

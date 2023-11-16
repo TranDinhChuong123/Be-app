@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+<<<<<<< HEAD
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function GiaoDoAnDH({ navigation }) {
@@ -50,6 +51,15 @@ export default function GiaoDoAnDH({ navigation }) {
       >
         <Text style={{ fontWeight: "700", textAlign: "center" }}>Đặt ngay</Text>
       </TouchableOpacity>
+=======
+import { StyleSheet, Text, View } from "react-native";
+
+export default function GiaoDoAnDH() {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+
+>>>>>>> 492e18e470b7e86966d7048290c1870c697f36f7
       <StatusBar style="auto" />
     </View>
   );
