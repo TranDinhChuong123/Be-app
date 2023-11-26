@@ -1,6 +1,9 @@
+{/* <Stack.Screen name="Đặt vé xe" options={{headerShown: false}} component={ManHinhDatVeXe}/>
+            <Stack.Screen name="Hoạt động" component={HoatDong}/>
+            <Stack.Screen name="Nạp Mạng" options={{headerShown: false}} component={NapMang}/> */}
 import React, { useState } from 'react';
-import { View, TextInput, Button, Modal, FlatList, Text, StyleSheet, Dimensions, Image, TouchableOpacity, ScrollView } from 'react-native';
-
+import { View, TextInput, Button, Modal, FlatList, Text, StyleSheet, Dimensions, Image, TouchableOpacity, ScrollView, Pressable } from 'react-native';
+import HoatDong from './hoatDong';
 
 
 const ManHinhDatVeXe = () => {
@@ -33,7 +36,10 @@ const ManHinhDatVeXe = () => {
     <View style = {styles.container}>
       <View style = {styles.header}>
         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Mua vé xe khách</Text>
-        <Text style ={{color:'#3366FF', fontSize: 20, fontWeight: 'bold'}}>Vé của tôi</Text>
+        <Pressable onPress={() => {navigation.navigate('Hoạt động')}}>
+          <Text style ={{color:'#3366FF', fontSize: 20, fontWeight: 'bold'}}>Vé của tôi</Text>
+        </Pressable>
+        
       </View>
       <View style={styles.inputtxt}>
         <View style={{flex: 1, flexDirection: 'row',  alignItems: 'center'}}>
