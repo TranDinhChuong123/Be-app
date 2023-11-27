@@ -11,16 +11,25 @@ import GiaoDoAnTK from "./component/GiaoDoAnTK";
 
 import GiaoDoAnDH from "./component/GiaoDoAnDH";
 import GiaoDoAnYT from "./component/GiaoDoAnYT";
-import TrangChu from "./component/Trangchu";
+import TrangChu from "./component/TrangChu";
 import HoatDongTC from "./component/HoatDongTC";
 import TaiKhoanTC from "./component/TaiKhoanTC";
 import DoiUuDaiTC from "./component/DoiUuDaiTC";
 import KMDaTangGDA from "./component/KMDaTangGDA";
 import CTSPKMDT from "./component/CTSPKMDT";
 import XemDonHang from "./component/XemDonHang";
+
+import LoginScreen from "./component/LoginScreen";
 import NapMang from "./component/napData";
 import ManHinhDatVeXe from "./component/BookingBusTicket";
 import GoiTK from "./component/GoiTK";
+import DailyAttendanceScreen from "./component/CheckinScr";
+import ChiTietGD from "./component/chiTietGD";
+import LSGiaoDich from "./component/LSGiaoDich";
+import HoatDong from "./component/hoatDong";
+import SingUp from "./component/singUp";
+
+import { flushSync } from "react-dom";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -364,21 +373,18 @@ export default function App({ navigation }) {
           name="TaiKhoanTC"
           component={TaiKhoanTC}
         />
-        <Stack.Screen
-          options={{ headerShown: true }}
-          name="NapMang"
-          component={NapMang}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="ManHinhDatVeXe"
-          component={ManHinhDatVeXe}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="GoiTK"
-          component={GoiTK}
-        />
+
+        <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}}/>
+        <Stack.Screen name='Hoàn tất đăng ký' component={SingUp}/>
+
+        <Stack.Screen name="Gói Tiết kiệm"  component={GoiTK} />
+        <Stack.Screen name="Lịch sử giao dịch" component={LSGiaoDich}/>
+        <Stack.Screen name="Chi tiết giao dịch" options={{headerShown: false}} component={ChiTietGD}/>
+        <Stack.Screen name="Mua vé xe khách" component={ManHinhDatVeXe}/>
+            
+        <Stack.Screen name="Nạp tiền điện thoại" component={NapMang}/>
+        <Stack.Screen name="Hoạt động"  component={HoatDong}/>
+        <Stack.Screen name="Thử thách" component={DailyAttendanceScreen}/>
 
         {/* <Stack.Screen
           options={{ headerShown: false }}

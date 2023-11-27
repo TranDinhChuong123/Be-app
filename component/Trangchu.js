@@ -24,6 +24,8 @@ const data = [
   { image: require("../imageGiaoDoAn/nap3g.jpg"), text: "Nạp ĐT/3G" },
   { image: require("../imageGiaoDoAn/thuthach.jpg"), text: "Thử thách" },
 ];
+
+
 const data2 = [
   {
     iamge1: require("/imageGiaoDoAn/hailatra1.jpg"),
@@ -145,7 +147,7 @@ const data7 = [
     text3: "ECHO MEDI",
   },
 ];
-export default function TrangChu({ navigation }) {
+export default function GiaoDoAnYT({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView

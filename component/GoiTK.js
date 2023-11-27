@@ -25,11 +25,11 @@ const GoiTK = ({navigation, route}) => {
       return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}> 
-                <Text style={{fontSize: 20, fontWeight: 'bold', left: 15}}>Gói tiết kiệm</Text>
-                <Pressable onPress={() => {navigation.navigate('Lịch sử giao dịch')}}> 
+                {/* <Text style={{fontSize: 20, fontWeight: 'bold', left: 15}}>Gói tiết kiệm</Text> */}
+                <TouchableOpacity onPress={() => {navigation.navigate('Lịch sử giao dịch')}} style={{bottom: 45}}> 
                 {/* navigate từ tên bên app.js */}
-                    <Image style={{width:25, height: 25, right: 15}} source={require('../assets/dongho.png')}/>
-                </Pressable>
+                    <Image style={{width:25, height: 25,left: 345}} source={require('../assets/dongho.png')}/>
+                </TouchableOpacity>
                 
             </View>
             <View style={styles.btnView}>
@@ -142,10 +142,6 @@ const windowHeight = Dimensions.get('window').height;
             position: 'relative'
         },
         header:{
-            flex:1, 
-            flexDirection: 'row', 
-            justifyContent: 'space-between',
-            alignItems: 'center',
             width: windowWidth,
             backgroundColor: '#fff',
         },
@@ -156,6 +152,7 @@ const windowHeight = Dimensions.get('window').height;
             alignItems: 'center',
             width: windowWidth,
             backgroundColor: '#fff',
+            bottom: 25
         },
         view1:{
             flex: 10,

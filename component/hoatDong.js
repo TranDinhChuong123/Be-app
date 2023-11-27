@@ -1,13 +1,9 @@
-        // // <Stack.Navigator>
-        //   //   <Stack.Screen name="Đặt vé xe" options={{headerShown: false}} component={ManHinhDatVeXe}/>
-        //     <Stack.Screen name="Hoạt động" component={HoatDong}/>
-        //     <Stack.Screen name="Nạp Mạng" options={{headerShown: false}} component={NapMang}/>
-        //   // </Stack.Navigator>
+
           import React, { useState, useEffect } from 'react';
           import { FlatList, ScrollView, TouchableOpacity, Dimensions, TouchableHighlight, Pressable, TextInput } from 'react-native';
           import { View, Button, Image, StyleSheet, Text, SafeAreaView } from 'react-native';
           import NapMang from './napData';
-          import ManHinhDatVeXe from './bookcartik';
+          import ManHinhDatVeXe from './BookingBusTicket';
           
           const HoatDong = () => {
               const [currentView, setCurrentView] = useState('view6');
@@ -116,7 +112,7 @@
                               <Text style={styles.txt}>tiền điện thoại ngay để nhận được chiết</Text>
                               <Text style={styles.txt}>khấu từ Be nhé!</Text>
                               <TouchableOpacity style={{backgroundColor: '#FFCC33',top: 15, width: 150, height: 50, justifyContent:'center', alignItems: 'center', borderRadius: 12}}
-                                  onPress={() => navigation.navigate('Nạp mạng')}>
+                                  onPress={() => navigation.navigate('Nạp tiền điện thoại')}>
                                   <Text style={{fontSize: 20, fontWeight: 'bold', bottom: 2}}>Nạp ngay</Text>
                               </TouchableOpacity>
                           </View>}

@@ -1,8 +1,26 @@
 import React, { useState } from 'react';
 import { View, TextInput, Dimensions, StyleSheet, Text, TouchableOpacity, Image, ImageBackground } from 'react-native';
 
-export default function LoginScreen ({navigation}){
+const data = [
+  { id: 1, name: 'Nguyen Van A', phoneNumber: '0123456789', email: 'nguyenvana@gmail.com' },
+  { id: 2, name: 'Tran Thi B', phoneNumber: '0987654321', address: 'tranthib@gmail.com' },
+  { id: 3, name: 'Tran Dinh Chuong', phoneNumber: '0945349387', address: 'trandinhchuong@gmail.com' },
+];
+
+export default function LoginScreen ({navigation, route}){
   const [phonenumber, setphonenumber] = useState("  ");
+
+  const handleLogin = () => {
+    const user = data.find((item) => item.phoneNumber === phonenumber);
+    if (user) {
+      navigation.navigate('TrangChuTap');
+      console.log('trang chu');
+    } else {
+      navigation.navigate('Hoàn tất đăng ký');
+      console.log('dang ky');
+    }
+  };
+
 
   return (
     <View style={styles.container}>
@@ -23,7 +41,7 @@ export default function LoginScreen ({navigation}){
         </View>
         <View style={styles.btn}>
             <TouchableOpacity style={{width:350, height: 50,backgroundColor: '#FF9900',justifyContent: 'center', alignItems: 'center', borderRadius: 10,  }}
-                onPress={() => navigation.navigate("Trangchu",{paramKey: phonenumber})}>
+                onPress={handleLogin}>
                 <Text style={{fontSize: 20}}>Tiếp tục</Text>
             </TouchableOpacity>
         </View>
@@ -85,7 +103,7 @@ const styles = StyleSheet.create({
     height:50,
     borderWidth:1,
     borderRadius:10,
-    paddingLeft:40,
+    paddingLeft:20,
     backgroundColor: '#F7F8F9',
   },    
   btn:{

@@ -29,10 +29,12 @@ const NapMang = ({navigation}) =>{
       return(
         <SafeAreaView style = {styles.container}>
           <View style = {styles.header}>
-            <Text style={{fontSize:20, fontWeight:'bold', left: 10}}>Nạp tiền điện thoại</Text>
-            <Pressable onPress={() => {navigation.navigate('Hoạt động')}}>
-              <Text style={{fontSize: 16, color: '#3399FF', fontWeight:'bold', right: 13}}>Xem lịch sử</Text>
-            </Pressable>
+            {/* <Text style={{fontSize:20, fontWeight:'bold', left: 10}}>Nạp tiền điện thoại</Text> */}
+            <TouchableOpacity onPress={() => {navigation.navigate('Hoạt động')}} style={{bottom: 30,}}>
+              <View style={{flex: 1, flexDirection: 'column'}}>
+                <Text style={{fontSize: 16, color: '#3399FF', fontWeight:'bold', left: 300,  bottom: 25,}}>Xem lịch sử</Text>
+              </View>
+            </TouchableOpacity>
           </View>
           <View style = {styles.btn}>
             <TouchableOpacity style = {styles.btnView} onPress={switchToView1}>
