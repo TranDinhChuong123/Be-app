@@ -21,6 +21,7 @@ const data1 = [
 export default function CTSPKMDT({ navigation }) {
   const [cart, setCart] = useState([]);
   const [totalAmount, setTotalAmount] = useState(0);
+  const [count, setCount] = useState(0);
 
   const [data1, setData1] = useState([
     {
@@ -161,23 +162,26 @@ export default function CTSPKMDT({ navigation }) {
   ]);
   const handleIncrement = (index) => {
     const newData = [...data];
+    setCount((count) => count + 1);
 
     newData[index].count = newData[index].count + 1;
+    const priceToAdd = parseFloat(newData[index].Text3);
+    setTotalAmount((prevTotal) => prevTotal + priceToAdd);
     setData(newData);
-
     if (newData[index].count == 1) {
-      const priceToAdd = parseFloat(newData[index].Text3);
-      setTotalAmount((prevTotal) => prevTotal + priceToAdd);
       setCart((prevCart) => [...prevCart, newData[index]]);
     }
+
     if (newData[index].count > 1) {
       const newDataCart = [...cart];
       newDataCart[index].count = newData[index].count;
       setCart(newDataCart);
+      // setCart((prevCart) => [...prevCart, newData[index]]);
     }
   };
 
   const handleDecrement = (index) => {
+    setCount((count) => count - 1);
     const newData = [...data];
     newData[index].count = Math.max(0, newData[index].count - 1);
     setData(newData);
@@ -185,8 +189,13 @@ export default function CTSPKMDT({ navigation }) {
     if (newData[index].count >= 0) {
       const priceToAdd = parseFloat(newData[index].Text3);
       setTotalAmount((prevTotal) => prevTotal - priceToAdd);
-      setCart((prevCart) => [...prevCart, newData[index].Text3]);
+      // setCart((prevCart) => [...prevCart, newData[index].Text3]);
     }
+    // if (newData[index].count == 0) {
+    //   setCart((prevCart) =>
+    //     prevCart.filter((item, index) => index !== newData[index].count)
+    //   );
+    // }
   };
 
   return (
@@ -311,7 +320,9 @@ export default function CTSPKMDT({ navigation }) {
             }}
             source={require("../imageGiaoDoAn/giohang.jpg")}
           ></Image>
-          <Text style={{ fontSize: 20, fontWeight: "700", left: 45 }}>1</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700", left: 45 }}>
+            {count}
+          </Text>
         </TouchableOpacity>
       </View>
 

@@ -25,15 +25,15 @@ const data = [
   { image: require("../imageGiaoDoAn/thuthach.jpg"), text: "Thử thách" },
 ];
 
-const datac= [
+const datac = [
   { image: require("../imageGiaoDoAn/nap3g.jpg"), text: "Nạp ĐT/3G" },
   { image: require("../imageGiaoDoAn/thuthach.jpg"), text: "Thử thách" },
-  { image: require("../assets/veBus.png"), text: "Vé xe khách"},
-  { image: require("../assets/goiTK.png"), text: "Gói hội viên"},
+  { image: require("../assets/veBus.png"), text: "Vé xe khách" },
+  { image: require("../assets/goiTK.png"), text: "Gói hội viên" },
   { image: require("../imageGiaoDoAn/taichinh.jpg"), text: "Tài chính" },
   { image: require("../imageGiaoDoAn/nap3g.jpg"), text: "Nạp ĐT/3G" },
   { image: require("../imageGiaoDoAn/thuthach.jpg"), text: "Thử thách" },
-]
+];
 const data2 = [
   {
     iamge1: require("/imageGiaoDoAn/hailatra1.jpg"),
@@ -205,7 +205,9 @@ export default function GiaoDoAnYT({ navigation }) {
             ></Image>
           </TouchableOpacity>
         </LinearGradient>
+
         <TextInput
+          onPress={() => navigation.navigate("GiaoDoAnTab")}
           style={{
             position: "absolute",
             width: "90%",
@@ -247,11 +249,12 @@ export default function GiaoDoAnYT({ navigation }) {
               onPress={() => {
                 if (item.text == "Giao đồ ăn") {
                   navigation.navigate("GiaoDoAnTab");
-
-                  console.log("Đã nhấn vào laptrinh");
-                } else {
-                  // Thực hiện hành động khác khi item.text không phải "laptrinh"
-                  console.log("Đã nhấn vào một giá trị khác");
+                } else if (item.text == "Giao hàng") {
+                  navigation.navigate("GiaoHangGDH");
+                } else if (item.text == "Xe máy") {
+                  navigation.navigate("XeMayGDH");
+                } else if (item.text == "Ô tô") {
+                  navigation.navigate("XeMayGDH");
                 }
               }}
             >
@@ -287,13 +290,11 @@ export default function GiaoDoAnYT({ navigation }) {
               onPress={() => {
                 if (item.text == "Nạp ĐT/3G") {
                   navigation.navigate("Nạp tiền điện thoại");
-
-                } else  if (item.text == "Thử thách"){
+                } else if (item.text == "Thử thách") {
                   navigation.navigate("Thử thách");
-                
-                } else  if (item.text == "Vé xe khách"){
+                } else if (item.text == "Vé xe khách") {
                   navigation.navigate("Mua vé xe khách");
-                } else  if (item.text == "Gói hội viên"){
+                } else if (item.text == "Gói hội viên") {
                   navigation.navigate("Gói Tiết kiệm");
                 }
               }}

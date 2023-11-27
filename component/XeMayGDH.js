@@ -14,6 +14,7 @@ export default function XeMayGDH({ navigation }) {
   return (
     <View style={styles.container}>
       <TouchableOpacity
+        onPress={() => navigation.navigate("TrangChuTap")}
         style={{
           position: "absolute",
           top: 10,
@@ -234,4 +235,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-});     
+});

@@ -28,6 +28,8 @@ import ChiTietGD from "./component/chiTietGD";
 import LSGiaoDich from "./component/LSGiaoDich";
 import HoatDong from "./component/hoatDong";
 import SingUp from "./component/singUp";
+import GiaoHangGDH from "./component/GiaoHangGDH";
+import XeMayGDH from "./component/XeMayGDH";
 
 import { flushSync } from "react-dom";
 
@@ -373,21 +375,51 @@ export default function App({ navigation }) {
           name="TaiKhoanTC"
           component={TaiKhoanTC}
         />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="GiaoHangGDH"
+          component={GiaoHangGDH}
+        />
 
-        <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}}/>
-        <Stack.Screen name='Hoàn tất đăng ký' component={SingUp}/>
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="XeMayGDH"
+          component={XeMayGDH}
+        />
 
-        <Stack.Screen name="Gói Tiết kiệm" options={{headerShown: false}} component={GoiTK} />
-        <Stack.Screen name="Lịch sử giao dịch" component={LSGiaoDich}/>
-        <Stack.Screen name="Chi tiết giao dịch" options={{headerShown: false}} component={ChiTietGD}/>
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="Hoàn tất đăng ký" component={SingUp} />
 
-        <Stack.Screen name="Nạp tiền điện thoại" options={{headerShown: false}} component={NapMang}/>
-        <Stack.Screen name="Hoạt động"  component={HoatDong}/>
+        <Stack.Screen
+          name="Gói Tiết kiệm"
+          options={{ headerShown: false }}
+          component={GoiTK}
+        />
+        <Stack.Screen name="Lịch sử giao dịch" component={LSGiaoDich} />
+        <Stack.Screen
+          name="Chi tiết giao dịch"
+          options={{ headerShown: false }}
+          component={ChiTietGD}
+        />
 
-        <Stack.Screen name="Mua vé xe khách" options={{headerShown: false}} component={ManHinhDatVeXe}/>
-            
-        
-        <Stack.Screen name="Thử thách" component={DailyAttendanceScreen}/>
+        <Stack.Screen
+          name="Nạp tiền điện thoại"
+          options={{ headerShown: false }}
+          component={NapMang}
+        />
+        <Stack.Screen name="Hoạt động" component={HoatDong} />
+
+        <Stack.Screen
+          name="Mua vé xe khách"
+          options={{ headerShown: false }}
+          component={ManHinhDatVeXe}
+        />
+
+        <Stack.Screen name="Thử thách" component={DailyAttendanceScreen} />
 
         {/* <Stack.Screen
           options={{ headerShown: false }}

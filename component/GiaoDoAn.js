@@ -354,7 +354,7 @@ const data5 = [
 
   // Thêm các mục khác vào đây
 ];
-export default function GiaoDoAn() {
+export default function GiaoDoAn({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
@@ -382,7 +382,9 @@ export default function GiaoDoAn() {
           data={data4}
           renderItem={({ item }) => (
             <View>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("KMDaTangGDA")}
+              >
                 <Image
                   style={{
                     width: 60,
@@ -462,7 +464,11 @@ export default function GiaoDoAn() {
           data={data}
           renderItem={({ item }) => (
             <View>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate("KMDaTangGDA");
+                }}
+              >
                 <Image
                   style={{
                     width: 180,

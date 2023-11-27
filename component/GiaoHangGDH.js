@@ -26,6 +26,7 @@ export default function GiaoHangGDH({ navigation }) {
         }}
       >
         <TouchableOpacity
+          onPress={() => navigation.navigate("TrangChuTap")}
           style={{
             position: "absolute",
             top: 20,
