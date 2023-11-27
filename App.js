@@ -377,13 +377,16 @@ export default function App({ navigation }) {
         <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}}/>
         <Stack.Screen name='Hoàn tất đăng ký' component={SingUp}/>
 
-        <Stack.Screen name="Gói Tiết kiệm"  component={GoiTK} />
+        <Stack.Screen name="Gói Tiết kiệm" options={{headerShown: false}} component={GoiTK} />
         <Stack.Screen name="Lịch sử giao dịch" component={LSGiaoDich}/>
         <Stack.Screen name="Chi tiết giao dịch" options={{headerShown: false}} component={ChiTietGD}/>
-        <Stack.Screen name="Mua vé xe khách" component={ManHinhDatVeXe}/>
-            
-        <Stack.Screen name="Nạp tiền điện thoại" component={NapMang}/>
+
+        <Stack.Screen name="Nạp tiền điện thoại" options={{headerShown: false}} component={NapMang}/>
         <Stack.Screen name="Hoạt động"  component={HoatDong}/>
+
+        <Stack.Screen name="Mua vé xe khách" options={{headerShown: false}} component={ManHinhDatVeXe}/>
+            
+        
         <Stack.Screen name="Thử thách" component={DailyAttendanceScreen}/>
 
         {/* <Stack.Screen

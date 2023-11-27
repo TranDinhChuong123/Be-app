@@ -25,7 +25,15 @@ const data = [
   { image: require("../imageGiaoDoAn/thuthach.jpg"), text: "Thử thách" },
 ];
 
-
+const datac= [
+  { image: require("../imageGiaoDoAn/nap3g.jpg"), text: "Nạp ĐT/3G" },
+  { image: require("../imageGiaoDoAn/thuthach.jpg"), text: "Thử thách" },
+  { image: require("../assets/veBus.png"), text: "Vé xe khách"},
+  { image: require("../assets/goiTK.png"), text: "Gói hội viên"},
+  { image: require("../imageGiaoDoAn/taichinh.jpg"), text: "Tài chính" },
+  { image: require("../imageGiaoDoAn/nap3g.jpg"), text: "Nạp ĐT/3G" },
+  { image: require("../imageGiaoDoAn/thuthach.jpg"), text: "Thử thách" },
+]
 const data2 = [
   {
     iamge1: require("/imageGiaoDoAn/hailatra1.jpg"),
@@ -266,7 +274,7 @@ export default function GiaoDoAnYT({ navigation }) {
           horizontal
           showsHorizontalScrollIndicator={false}
           style={{ position: "absolute", top: 280, width: "100%" }}
-          data={data}
+          data={datac}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={{
@@ -275,6 +283,19 @@ export default function GiaoDoAnYT({ navigation }) {
 
                 width: 85,
                 height: 100,
+              }}
+              onPress={() => {
+                if (item.text == "Nạp ĐT/3G") {
+                  navigation.navigate("Nạp tiền điện thoại");
+
+                } else  if (item.text == "Thử thách"){
+                  navigation.navigate("Thử thách");
+                
+                } else  if (item.text == "Vé xe khách"){
+                  navigation.navigate("Mua vé xe khách");
+                } else  if (item.text == "Gói hội viên"){
+                  navigation.navigate("Gói Tiết kiệm");
+                }
               }}
             >
               <Image

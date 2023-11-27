@@ -35,10 +35,15 @@ const ManHinhDatVeXe = () => {
   return (
     <View style = {styles.container}>
       <View style = {styles.header}>
-        {/* <Text style={{fontSize: 20, fontWeight: 'bold'}}>Mua vé xe khách</Text> */}
-        <TouchableOpacity onPress={() => {navigation.navigate('Hoạt động')}} style={{right: 170, bottom: 45}}>
-          <View style={{flex: 1, flexDirection: 'column'}}>
-            <Text style={{fontSize: 16, color: '#3399FF', fontWeight:'bold', left: 300,  }}>Vé của tôi</Text>
+        <View style={{flex:1, flexDirection:'row'}}>
+          <TouchableOpacity onPress={()=>{navigation.navigate('TrangChuTap')}}>
+            <Image source={require('../assets/back.png')} style={{width: 30, height: 30, resizeMode:'center'}}/>
+          </TouchableOpacity>
+          <Text style={{fontSize: 20, fontWeight: 'bold', left: 5}}>Mua vé xe khách</Text>
+        </View>
+        <TouchableOpacity onPress={() => {navigation.navigate('Hoạt động')}}>
+          <View>
+            <Text style={{fontSize: 16, color: '#3399FF', fontWeight:'bold', right: 15}}>Vé của tôi</Text>
           </View>
         </TouchableOpacity>
         

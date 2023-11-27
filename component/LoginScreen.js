@@ -14,10 +14,10 @@ export default function LoginScreen ({navigation, route}){
     const user = data.find((item) => item.phoneNumber === phonenumber);
     if (user) {
       navigation.navigate('TrangChuTap');
-      console.log('trang chu');
+      
     } else {
       navigation.navigate('Hoàn tất đăng ký');
-      console.log('dang ky');
+      
     }
   };
 

@@ -25,12 +25,17 @@ const GoiTK = ({navigation, route}) => {
       return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}> 
-                {/* <Text style={{fontSize: 20, fontWeight: 'bold', left: 15}}>Gói tiết kiệm</Text> */}
-                <TouchableOpacity onPress={() => {navigation.navigate('Lịch sử giao dịch')}} style={{bottom: 45}}> 
-                {/* navigate từ tên bên app.js */}
-                    <Image style={{width:25, height: 25,left: 345}} source={require('../assets/dongho.png')}/>
+                <View style={{flex:1, flexDirection:'row'}}>
+                    <TouchableOpacity onPress={()=>{navigation.navigate('TrangChuTap')}}>
+                        <Image source={require('../assets/back.png')} style={{width: 30, height: 30, resizeMode:'center', left:10}}/>
+                    </TouchableOpacity>
+                    <Text style={{fontSize: 20, fontWeight: 'bold', left: 15}}>Gói tiết kiệm</Text>
+                </View>
+                <TouchableOpacity onPress={() => {navigation.navigate('Lịch sử giao dịch')}} > 
+                        <View>
+                            <Image style={{width:30, height: 30,resizeMode:'center', right: 20}} source={require('../assets/dongho.png')}/>
+                        </View>
                 </TouchableOpacity>
-                
             </View>
             <View style={styles.btnView}>
                 <TouchableOpacity style={{paddingRight: 50}} onPress={switchToView1}>
@@ -142,7 +147,10 @@ const windowHeight = Dimensions.get('window').height;
             position: 'relative'
         },
         header:{
-            width: windowWidth,
+            flex: 2,
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            alignItems: 'center',                           
             backgroundColor: '#fff',
         },
         btnView:{
