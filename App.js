@@ -344,6 +344,12 @@ export default function App({ navigation }) {
           component={CTSPKMDT}
         /> */}
         <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
           options={{ headerShown: false }}
           name="TrangChuTap"
           component={TrangChuTap}
@@ -387,11 +393,6 @@ export default function App({ navigation }) {
           component={XeMayGDH}
         />
 
-        <Stack.Screen
-          name="Login"
-          component={LoginScreen}
-          options={{ headerShown: false }}
-        />
         <Stack.Screen name="Hoàn tất đăng ký" component={SingUp} />
 
         <Stack.Screen
